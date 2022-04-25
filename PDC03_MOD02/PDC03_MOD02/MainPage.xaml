@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD02.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#a2bed1" Padding="40" CornerRadius="0">
+            <Label Text="Hi, I am Mikaella Mae C. Silva." HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Welcome to My First Ever Xamarin App!" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="I am a 3rd year student taking up the course Bachelor of Science in Information Technology. I made this application as a part of my requirement in Professional Domain Course 4." FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Check out my "/>
+                        <Span Text="works" FontAttributes="Bold"/>
+                        <Span Text=" below:"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Button 
+            Padding="12" Margin="20, 5, 20, 0" CornerRadius="15" BackgroundColor="#f7f8d9" 
+            Text="Activity 1 - XAML and Navigation" Clicked="OnNextPage"/>
+        <Button 
+             Padding="12" Margin="20, 5, 20, 0" CornerRadius="15" BackgroundColor="#f4e9e3"
+            Text="Activity 2 - Code Interactions" Clicked="OnActivity2"/>
+        <Button
+             Padding="12" Margin="20, 5, 20, 0" CornerRadius="15" BackgroundColor="#f6ecf4"
+            Text="Activity 3 - Data Binding" Clicked="OnActivity3"/>
+        <Button 
+             Padding="12" Margin="20, 5, 20, 0" CornerRadius="15" BackgroundColor="#ebf5ec"
+            Text="Activity 4 - Data Grid" Clicked="OnActivity4"/>
+    </StackLayout>
+
+</ContentPage>

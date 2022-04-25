@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD02.activity4"
+             Title="Colors">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label Text="Pastel Colors used in this project"
+                       FontSize="Medium"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="2"/>
+
+
+                <BoxView Color  ="#f7f8d9"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+                <Label Text="#f7f8d9"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       TextColor="Black"
+                       Padding="15,10"/>
+
+                <BoxView Color  ="#fdeedb"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
+                <Label Text="#fdeedb"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       TextColor="Black"
+                        Padding="15,10"/>
+
+                <BoxView Color  ="#f6ecf4"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+                <Label Text="#f6ecf4"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       TextColor="Black"
+                        Padding="15,10"/>
+
+                <BoxView Color  ="#ebf5ec"
+                       Grid.Row="2"
+                       Grid.Column="1"/>
+                <Label Text="#ebf5ec"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       TextColor="Black"
+                        Padding="15,10"/>
+
+                <BoxView Color  ="#a2bed1"
+                       Grid.Row="3"
+                       Grid.Column="0"/>
+                <Label Text="#a2bed1"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       TextColor="Black"
+                        Padding="15,10"/>
+
+                <BoxView Color  ="#d7d7d7"
+                       Grid.Row="3"
+                       Grid.Column="1"/>
+                <Label Text="#d7d7d7"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       TextColor="Black"
+                        Padding="15,10"/>
+
+                <Slider x:Name="SliderRate"
+                    Maximum="10"
+                    Minimum="1"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                />
+                
+                <Label   
+                    BindingContext="{x:Reference Name = SliderRate}"
+                    Text="{Binding Value, StringFormat='Rate the colors used in this project : {0:F0}'}"
+                    FontSize="17"
+                    Grid.Row="4"
+                    Padding="0, 25, 0, 0"
+                    Grid.ColumnSpan="2"/>
+
+
+                
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

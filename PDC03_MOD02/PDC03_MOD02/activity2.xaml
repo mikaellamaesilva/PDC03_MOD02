@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD02.activity2"
+             Title="Rate Xamarin">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="On a scale of 1 - 10"
+                   FontSize="15"
+                   Margin="20, 20, 20 ,0"/>
+            <Label x:Name="valueLabel"
+                   Text="Rate how much you like Xamarin : "
+                   FontSize="Large"
+                    Margin="20, 0, 10 ,20"
+                  />
+
+            <Slider 
+                    ValueChanged="OnSliderValueChanged"
+                    Margin="30, 10, 30 ,20"
+                    Maximum="10"
+                    Minimum="1"/>
+           
+           
+            <Button Text="Click Me" 
+                    Margin="30, 10, 30 ,20"
+                    Padding="12" CornerRadius="15" BackgroundColor="#f4e9e3"
+                    Clicked="OnButtonClicked"/>
+            
+            
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

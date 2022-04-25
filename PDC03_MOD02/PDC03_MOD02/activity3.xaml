@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD02.activity3"
+             Title="Rotate the arrow">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label x:Name="valueLabel"
+                   Text="Rotate the arrow "
+                   FontSize="Large"
+                    Margin="20, 20, 10 ,20"
+                  />
+
+
+            <Slider x:Name="SliderRotate"
+                    Maximum="360"
+                     Margin="30, 10, 30 ,20"
+                />
+            
+            <Label Text="→"
+                   BindingContext="{x:Reference Name = SliderRotate}"
+                   Rotation="{Binding Path=Value}"
+                   FontSize="200"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   TextColor="Goldenrod"
+                 />
+
+
+            <Label 
+                BindingContext="{x:Reference Name = SliderRotate}"
+                Text="{Binding Value, StringFormat='The arrow is rotated at {0:F0} degrees'}"
+                HorizontalOptions="Center"
+                Margin="30, 10, 30 ,20"
+                FontSize="20"
+                 
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
